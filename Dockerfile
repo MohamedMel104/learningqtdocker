@@ -9,3 +9,4 @@ RUN ninja
 RUN chmod +x firstbb
 RUN linuxdeploy --plugin qt --executable=firstbb --appdir ./deploy
 ENTRYPOINT [ "./deploy/usr/bin/firstbb", "-c"] 
+#modified on kali linux and pushed back
