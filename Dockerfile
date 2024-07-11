@@ -5,7 +5,7 @@ RUN sudo chmod 777 .
 COPY ./src/ .
 WORKDIR /files/build/
 RUN sudo chmod 777 .
-RUN qt-cmake -DCMAKE_BUILD_TYPE=release -G Ninja ../src/
+RUN qt-cmake -DCMAKE_BUILD_TYPE=release -G Ninja ..
 RUN ninja
 RUN chmod +x firstbb
 RUN linuxdeploy --plugin qt --executable=firstbb --appdir ./deploy
