@@ -3,9 +3,9 @@ RUN sudo apt update && sudo apt install -y libgl-dev libvulkan-dev
 COPY . .
 WORKDIR /build/
 RUN sudo chmod 777 .
-RUN qt-cmake -DCMAKE_BUILD_TYPE=release -G Ninja ..
-RUN cmake .
-RUN chmod +x firstbb
-RUN linuxdeploy --plugin qt --executable=firstbb --appdir ./deploy
-ENTRYPOINT [ "./deploy/usr/bin/firstbb", "-c"] 
+#RUN qt-cmake -DCMAKE_BUILD_TYPE=release -G Ninja ..
+#RUN ninja
+#RUN chmod +x firstbb
+#RUN linuxdeploy --plugin qt --executable=firstbb --appdir ./deploy
+ENTRYPOINT [ "/bin/bash", "ls .." , "-c"] 
 #modified on kali linux and pushed back
