@@ -4,7 +4,7 @@ WORKDIR /files/
 RUN sudo chmod 777 .
 COPY . .
 RUN mkdir build
-RUN cd /build/
+RUN cd ./build/
 RUN sudo chmod 777 .
 RUN qt-cmake -DCMAKE_BUILD_TYPE=release .. -G Ninja
 RUN ninja
