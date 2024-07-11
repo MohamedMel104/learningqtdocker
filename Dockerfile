@@ -1,4 +1,4 @@
-FROM stateoftheartio/qt6:6.6-gcc-aqt
+FROM stateoftheartio/qt6:6.6-gcc-aqt AS build
 RUN sudo apt update && sudo apt install -y libgl-dev libvulkan-dev
 WORKDIR /files/
 RUN sudo chmod 777 .
